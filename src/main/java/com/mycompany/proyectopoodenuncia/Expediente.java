@@ -115,4 +115,12 @@ public class Expediente {
     public List<Denuncia> getListaDenuncias() {
         return listaDenuncias;
     }
+
+    Iterable<Denuncia> obtenerDenuncias() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    void agregarDenuncia(Denuncia denuncia) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
