@@ -49,7 +49,69 @@ public class Denuncia {
         System.out.println("Pruebas: " + pruebas);
     }
 
-    // Getters y setters iran aquí
+    // Getters y setters
+    public String getLugar() {
+        return lugar;
+    }
 
+    public void setLugar(String lugar) {
+        this.lugar = lugar;
+    }
+
+    public String getDetalles() {
+        return detalles;
+    }
+
+    public void setDetalles(String detalles) {
+        this.detalles = detalles;
+    }
+
+    public List<String> getDelitos() {
+        return delitos;
+    }
+
+    public void setDelitos(List<String> delitos) {
+        this.delitos = delitos;
+    }
+
+    public Persona getDenunciante() {
+        return denunciante;
+    }
+
+    public void setDenunciante(Persona denunciante) {
+        this.denunciante = denunciante;
+    }
+
+    public Persona getOfendido() {
+        return ofendido;
+    }
+
+    public void setOfendido(Persona ofendido) {
+        this.ofendido = ofendido;
+    }
+
+    public Persona getDenunciado() {
+        return denunciado;
+    }
+
+    public void setDenunciado(Persona denunciado) {
+        this.denunciado = denunciado;
+    }
+
+    public List<Persona> getTestigos() {
+        return testigos;
+    }
+
+    public void setTestigos(List<Persona> testigos) {
+        this.testigos = testigos;
+    }
+
+    public List<String> getPruebas() {
+        return pruebas;
+    }
+
+    public void setPruebas(List<String> pruebas) {
+        this.pruebas = pruebas;
+    }
 
 }
