@@ -114,4 +114,5 @@ public class Denuncia {
         this.pruebas = pruebas;
     }
 
+    
 }
