@@ -14,7 +14,7 @@ public class Denuncia {
     private List<Persona> testigos;
     private List<String> pruebas;
 
-    public Denuncia(String lugar, String detalles) {
+    public Denuncia(String lugar, String detalles, String denunciado1, String ofendido1, String delito) {
         this.lugar = lugar;
         this.detalles = detalles;
         this.delitos = new ArrayList<>();
@@ -114,5 +114,9 @@ public class Denuncia {
         this.pruebas = pruebas;
     }
 
+    int getNumero() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
     
 }
