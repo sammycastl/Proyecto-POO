@@ -30,18 +30,20 @@ public class ProyectoPOODenuncia {
                     case 1 -> {
                         // Crear una denuncia
                         System.out.println("\nCreando una nueva denuncia:");
-                        System.out.print("Ingrese el lugar de la denuncia: ");
+                        System.out.print("Donde ocurrierin los hechos? ");
                         scanner.nextLine(); // Consumir la nueva línea pendiente
                         String lugar = scanner.nextLine();
-                        System.out.print("Ingrese los detalles de la denuncia: ");
+                        System.out.print("Ingrese los detalles de lo ocurrido: ");
                         String detalles = scanner.nextLine();
+                        Denuncia denuncia = null;
                         
-                        Denuncia denuncia = new Denuncia(lugar, detalles, this.denunciado, this.ofendido, this.delito);
+                        /*Denuncia denuncia = new Denuncia(lugar, detalles, this.denunciado, this.ofendido, this.delito);*/
                         
                         // Agregar la denuncia al expediente
                         expediente.agregarDenuncia(denuncia);
                         System.out.println("Denuncia creada y agregada al expediente.");
                     }
+
                     
                     case 2 -> {
                         // Listar denuncias en el expediente
