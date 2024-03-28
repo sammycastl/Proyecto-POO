@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 
 public class ProyectoPOODenuncia {
+
+    private static Denuncia denuncia;
     public static void main(String[] args) {
         // Crear un usuario
         try (Scanner scanner = new Scanner(System.in)) {
@@ -36,7 +38,7 @@ public class ProyectoPOODenuncia {
                         System.out.print("Ingrese los detalles de la denuncia: ");
                         String detalles = scanner.nextLine();
                         
-                        Denuncia denuncia = new Denuncia(lugar, detalles, this.denunciado, this.ofendido, this.delito);
+                       // Denuncia denuncia = new Denuncia(lugar, detalles, this.denunciado, this.ofendido, this.delito);
                         
                         // Agregar la denuncia al expediente
                         expediente.agregarDenuncia(denuncia);
