@@ -5,10 +5,8 @@ package com.mycompany.proyectopoodenuncia;
 
 import java.util.Scanner;
 
-
 public class ProyectoPOODenuncia {
 
-    private static Denuncia denuncia;
     public static void main(String[] args) {
         // Crear un usuario
         try (Scanner scanner = new Scanner(System.in)) {
@@ -38,17 +36,16 @@ public class ProyectoPOODenuncia {
                         System.out.print("Ingrese los detalles de la denuncia: ");
                         String detalles = scanner.nextLine();
                         
-                       // Denuncia denuncia = new Denuncia(lugar, detalles, this.denunciado, this.ofendido, this.delito);
-                        
+                        Denuncia nuevaDenuncia = new Denuncia(lugar, detalles, "", "", ""); // No se están proporcionando denunciado, ofendido y delito
                         // Agregar la denuncia al expediente
-                        expediente.agregarDenuncia(denuncia);
+                        expediente.agregarDenuncia(nuevaDenuncia);
                         System.out.println("Denuncia creada y agregada al expediente.");
                     }
                     
                     case 2 -> {
                         // Listar denuncias en el expediente
                         System.out.println("\nDenuncias en el expediente:");
-                        for (Denuncia d : expediente.obtenerDenuncias()) {
+                        for (Denuncia d : expediente.getListaDenuncias()) {
                             System.out.println("- Lugar: " + d.getLugar() + ", Detalles: " + d.getDetalles());
                         }
                     }
@@ -63,3 +60,4 @@ public class ProyectoPOODenuncia {
         }
     }
 }
+
