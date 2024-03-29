@@ -121,6 +121,7 @@ public class Expediente {
     }
 
     void agregarDenuncia(Denuncia denuncia) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        listaDenuncias.add(denuncia);
+
     }
 }
