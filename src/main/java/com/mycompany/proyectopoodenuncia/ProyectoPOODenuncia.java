@@ -30,17 +30,32 @@ public class ProyectoPOODenuncia {
                     case 1 -> {
                         // Crear una denuncia
                         System.out.println("\nCreando una nueva denuncia:");
-                        System.out.print("Ingrese el lugar de la denuncia: ");
-                        scanner.nextLine(); // Consumir la nueva línea pendiente
+
+                        System.out.print("Ingrese el lugar de lo ocurrido: ");
+                        scanner.nextLine();
                         String lugar = scanner.nextLine();
                         System.out.print("Ingrese los detalles de la denuncia: ");
                         String detalles = scanner.nextLine();
+
+                        System.out.println("Ingrese los detalles del denunciante:");
+                        Persona denunciante = crearPersonaDesdeInput(scanner);
+
+                        System.out.println("Ingrese los detalles del ofendido:");
+                        Persona ofendido = crearPersonaDesdeInput(scanner);
+
+                        System.out.println("Ingrese los detalles del denunciado(opcional):");
+                        Persona denunciado = crearPersonaDesdeInput(scanner);
                         
-                        Denuncia nuevaDenuncia = new Denuncia(lugar, detalles, "", "", ""); // No se están proporcionando denunciado, ofendido y delito
-                        // Agregar la denuncia al expediente
+                        System.out.println("Ingrese los detalles del testigo:");
+                        Persona testigo = crearPersonaDesdeInput(scanner);
+                        // seguir este patrón para los demás involucrados 
+                        Persona testigos = null;
+
+                        Denuncia nuevaDenuncia = new Denuncia(lugar, detalles, denunciante, ofendido, denunciado, testigos);
                         expediente.agregarDenuncia(nuevaDenuncia);
                         System.out.println("Denuncia creada y agregada al expediente.");
                     }
+
                     
                     case 2 -> {
                         // Listar denuncias en el expediente
@@ -59,6 +74,26 @@ public class ProyectoPOODenuncia {
             // Cerrar el scanner
         }
     }
+
+     private static Persona crearPersonaDesdeInput(Scanner scanner) {
+        System.out.print("Nombre: ");
+        String nombre = scanner.nextLine();
+        System.out.print("Edad: ");
+        int edad = scanner.nextInt();
+        scanner.nextLine(); // Consumir la nueva línea pendiente
+        System.out.print("Sexo: ");
+        String sexo = scanner.nextLine();
+        System.out.print("Género: ");
+        String genero = scanner.nextLine();
+        System.out.print("DNI: ");
+        String dni = scanner.nextLine();
+        System.out.print("Dirección: ");
+        String direccion = scanner.nextLine();
+        System.out.print("Teléfono: ");
+        String telefono = scanner.nextLine();
+        return new Persona(nombre, edad, sexo, genero, dni, direccion, telefono);
+    }
 }
 
-//El vida es el mejor equipo de la liga nacional
+//cambiamos constructor en denuncia
+//añadimos printlines en el main
