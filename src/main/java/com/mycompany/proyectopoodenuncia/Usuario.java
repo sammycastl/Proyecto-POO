@@ -6,7 +6,7 @@ public class Usuario {
     private String contraseña;
     private Rol rol;
 
-    public Usuario(String nombre, String contraseña) {
+    public Usuario(String nombre, String contraseña, Rol rol) {
         this.nombre = nombre;
         this.contraseña = contraseña;
         this.rol = rol;
