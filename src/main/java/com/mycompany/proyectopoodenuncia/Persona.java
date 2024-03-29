@@ -94,8 +94,10 @@ public class Persona {
         this.telefono = nuevoTelefono;
     }
 
-    String getNombre() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    void getNombre() {
+    }
+
+    void add(Persona testigo) {
     }
     
     
