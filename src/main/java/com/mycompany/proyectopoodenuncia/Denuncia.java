@@ -1,4 +1,3 @@
-
 package com.mycompany.proyectopoodenuncia;
 
 import java.util.ArrayList;
@@ -14,21 +13,41 @@ public class Denuncia {
     private List<Persona> testigos;
     private List<String> pruebas;
 
-    public Denuncia(String lugar, String detalles, String denunciado1, String ofendido1, String delito) {
+    // Constructor con parámetros de tipo String
+    public Denuncia(String lugar, String detalles, String denunciado, String ofendido, String delito, String testigo) {
         this.lugar = lugar;
         this.detalles = detalles;
         this.delitos = new ArrayList<>();
         this.testigos = new ArrayList<>();
         this.pruebas = new ArrayList<>();
+        // Suponiendo que denunciado, ofendido y testigo son nombres
+        this.denunciado = new Persona(denunciado);
+        this.ofendido = new Persona(ofendido);
+        // Agregar delito y testigo a las listas respectivas
+        this.agregarDelito(delito);
+        this.agregarTestigo(new Persona(testigo));
+    }
+
+    // Constructor con parámetros de tipo Persona
+    public Denuncia(String lugar, String detalles, Persona denunciante, Persona ofendido, Persona denunciado, Persona testigo) {
+        this.lugar = lugar;
+        this.detalles = detalles;
+        this.delitos = new ArrayList<>();
+        this.testigos = new ArrayList<>();
+        this.pruebas = new ArrayList<>();
+        this.denunciante = denunciante;
+        this.ofendido = ofendido;
+        this.denunciado = denunciado;
+        this.testigos.add(testigo);
     }
 
     // Método para agregar un delito a la denuncia
-    public void agregarDelito(String delito) {
+    public final void agregarDelito(String delito) {
         this.delitos.add(delito);
     }
 
     // Método para agregar un testigo a la denuncia
-    public void agregarTestigo(Persona testigo) {
+    public final void agregarTestigo(Persona testigo) {
         this.testigos.add(testigo);
     }
 
@@ -42,9 +61,6 @@ public class Denuncia {
         System.out.println("Lugar: " + lugar);
         System.out.println("Detalles: " + detalles);
         System.out.println("Delitos: " + delitos);
-        System.out.println("Denunciante: " + denunciante.getNombre());
-        System.out.println("Ofendido: " + ofendido.getNombre());
-        System.out.println("Denunciado: " + (denunciado != null ? denunciado.getNombre() : "N/A"));
         System.out.println("Testigos: " + testigos);
         System.out.println("Pruebas: " + pruebas);
     }
@@ -117,6 +133,4 @@ public class Denuncia {
     int getNumero() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
-    
-    
 }
