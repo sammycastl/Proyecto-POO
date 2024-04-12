@@ -10,7 +10,7 @@ public class Persona {
     private String direccion;
     private String telefono;
 
-    public Persona(String nombre, int edad, String sexo, String genero, String dni, String direccion, String telefono) {
+    public Persona(String nombre) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
