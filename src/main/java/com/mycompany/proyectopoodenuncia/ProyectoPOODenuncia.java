@@ -91,9 +91,6 @@ public class ProyectoPOODenuncia {
         String direccion = scanner.nextLine();
         System.out.print("Teléfono: ");
         String telefono = scanner.nextLine();
-        return new Persona(nombre, edad, sexo, genero, dni, direccion, telefono);
+        return new Persona(nombre);
     }
 }
-
-//cambiamos constructor en denuncia
-//añadimos printlines en el main
