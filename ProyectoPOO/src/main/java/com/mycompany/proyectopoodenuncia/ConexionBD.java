@@ -13,10 +13,10 @@ public class ConexionBD{
         if (conexion == null) {
             try {
                 String url = "";
-                String user = "";
-                String password = "";
+                String usario = "";
+                String contrasena = "";
                 
-                conexion = DriverManager.getConnection(url, user, password);
+                conexion = DriverManager.getConnection(url, usario, contrasena);
                 System.out.println("Conexión establecida con éxito.");
             } catch (SQLException e) {
                 System.out.println("Error al conectar a la base de datos: " + e.getMessage());
