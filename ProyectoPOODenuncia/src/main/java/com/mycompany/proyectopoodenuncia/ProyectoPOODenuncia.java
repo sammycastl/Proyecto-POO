@@ -8,6 +8,9 @@ import java.util.Scanner;
 public class ProyectoPOODenuncia {
 
     public static void main(String[] args) {
+        
+        //Iniciando BD
+            Connection conexion = ConexionBD.getConnection();
         // Crear un usuario
         try (Scanner scanner = new Scanner(System.in)) {
             // Crear un usuario
@@ -60,12 +63,7 @@ public class ProyectoPOODenuncia {
         }
     }
     
-    
-        ////////////// Parte BD
-
-   
-        Connection conexion = ConexionBD.getConnection();
-        
+        //Cerrando BD
         ConexionBD.closeConnection();
     
 
