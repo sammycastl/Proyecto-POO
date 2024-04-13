@@ -6,6 +6,11 @@ import java.util.Scanner;
 public class ProyectoPOODenuncia {
 
     public static void main(String[] args) {
+        
+        //Conectando a la base de datos
+        Connection conexion = ConexionBD.getConnection();
+        
+
         // Crear un usuario
         try (Scanner scanner = new Scanner(System.in)) {
             // Crear un usuario
@@ -72,9 +77,7 @@ public class ProyectoPOODenuncia {
             // Cerrar el scanner
         }
     }
-        Connection conexion = ConexionBD.getConnection();
-        /*  ConexionBD.closeConnection();*/
-
+        
      private static Persona crearPersonaDesdeInput(Scanner scanner) {
         System.out.print("Nombre: ");
         String nombre = scanner.nextLine();
@@ -93,4 +96,6 @@ public class ProyectoPOODenuncia {
         String telefono = scanner.nextLine();
         return new Persona(nombre);
     }
+     //Desconectarse de la base de datos
+     /*  ConexionBD.closeConnection();*/
 }
