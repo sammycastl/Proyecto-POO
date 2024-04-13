@@ -1,8 +1,6 @@
-
-
 package com.mycompany.proyectopoodenuncia;
 
-
+import java.sql.Connection;
 import java.util.Scanner;
 
 public class ProyectoPOODenuncia {
@@ -74,6 +72,8 @@ public class ProyectoPOODenuncia {
             // Cerrar el scanner
         }
     }
+        Connection conexion = ConexionBD.getConnection();
+        /*  ConexionBD.closeConnection();*/
 
      private static Persona crearPersonaDesdeInput(Scanner scanner) {
         System.out.print("Nombre: ");
