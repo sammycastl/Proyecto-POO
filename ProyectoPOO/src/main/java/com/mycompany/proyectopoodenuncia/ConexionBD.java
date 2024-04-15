@@ -1,4 +1,4 @@
-package com.mycompany.proyectopoodenuncia;
+/*package com.mycompany.proyectopoodenuncia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -37,4 +37,4 @@ public class ConexionBD{
             }
         }
     }
-}
+}*/
