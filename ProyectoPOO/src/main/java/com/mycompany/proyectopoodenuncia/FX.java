@@ -10,6 +10,10 @@ public class FX extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        // Llamar al método existente de tu clase ProyectoPOODenuncia
+        ProyectoPOODenuncia proyecto = new ProyectoPOODenuncia();
+        proyecto.iniciarAplicacion();
+
         // Crear una etiqueta con el mensaje de bienvenida
         Label label = new Label("¡Bienvenido al sistema de denuncias!");
 
