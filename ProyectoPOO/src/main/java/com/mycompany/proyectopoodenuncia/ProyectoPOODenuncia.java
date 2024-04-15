@@ -8,7 +8,7 @@ public class ProyectoPOODenuncia {
     public static void main(String[] args) {
         
         //Conectando a la base de datos
-        Connection conexion = ConexionBD.getConnection();
+        /*Connection conexion = ConexionBD.getConnection();*/
         
 
         // Crear un usuario
@@ -98,4 +98,12 @@ public class ProyectoPOODenuncia {
     }
      //Desconectarse de la base de datos
      /*  ConexionBD.closeConnection();*/
+
+    void listarDenuncias() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    void crearDenuncia() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
