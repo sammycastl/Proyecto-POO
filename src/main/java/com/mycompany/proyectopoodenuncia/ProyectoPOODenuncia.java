@@ -73,7 +73,7 @@ public class ProyectoPOODenuncia {
         }
     }
         Connection conexion = ConexionBD.getConnection();
-        /*  ConexionBD.closeConnection();*/
+        /*  ConexionBD.closeConnection();*/ //usamos despues
 
      private static Persona crearPersonaDesdeInput(Scanner scanner) {
         System.out.print("Nombre: ");
