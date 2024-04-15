@@ -14,6 +14,7 @@ public class Expediente {
 
     private String descripcion;
     private String denunciante;
+    private String lugar;
     private String denunciado;
     private String ofendido;
     private String delito;
@@ -39,6 +40,8 @@ public class Expediente {
         System.out.println("No. " + numero);
         System.out.print("Nombre del denunciante: ");
         denunciante = scanner.nextLine();
+        System.out.print("Lugar de lo ocurrido: ");
+        lugar = scanner.nextLine();
         System.out.print("Nombre del acusado (opcional): ");
         denunciado = scanner.nextLine();
         System.out.print("Nombre del ofendido: ");
@@ -50,7 +53,7 @@ public class Expediente {
         System.out.println("----------------------------------------------------------");
 
         // Crear una nueva denuncia y agregarla al expediente
-        Denuncia nuevaDenuncia = new Denuncia(this.descripcion, this.denunciante, this.denunciado, this.ofendido, this.delito, this.testigo);
+        Denuncia nuevaDenuncia = new Denuncia(this.descripcion, this.descripcion, this.denunciado, this.ofendido, this.delito, this.testigo);
         listaDenuncias.add(nuevaDenuncia);
     }
 
